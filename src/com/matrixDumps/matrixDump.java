@@ -45,5 +45,6 @@ public class matrixDump {
         m1 = readMat();
         printMat(m1);
 //        System.out.println(mulMat());
+
     }
 }
