@@ -31,7 +31,7 @@ public class matrixDump {
         int [][] res = new int[r1][c2];
         for(int i=0; i<r1; i++){
             for(int j=0; j<c2; j++){
-                for(k = 0; k<r2 ; k++){
+                for(int k = 0; k<r2 ; k++){
                     res[i][j] += m1[i][k] * m2[k][j];
                 }
             }
@@ -40,10 +40,7 @@ public class matrixDump {
     }
 
     public static void main(String[] args){
-
-        int[][] m1 = new int[][];
-        m1 = readMat();
-        printMat(m1);
+        printMat(readMat());
 //        System.out.println(mulMat());
 
     }
