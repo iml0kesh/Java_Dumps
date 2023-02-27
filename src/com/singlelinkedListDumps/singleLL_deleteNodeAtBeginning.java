@@ -56,9 +56,12 @@ public class singleLL_deleteNodeAtBeginning {
     }
 
     public void deleteNodeAtBeginning(){
-        Node current = head;
-        current = current.next;
-        head = current;
+        if(head == null) return;
+        else {
+            if(head != tail) {
+                head = head.next;
+            }
+        }
         System.out.println("Node At the Beginning deleted.");
     }
 
