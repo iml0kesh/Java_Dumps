@@ -1,16 +1,12 @@
 package com.singlelinkedListDumps;
 
-import java.util.Scanner;
 
-
-//Java Program to create and display a singly linked list
-
-public class singleLL {
+public class singleLL_removeDuplicates {
     class Node {
         int data;
         Node next;
 
-        public Node(int x){
+        public Node(int x) {
             data = x;
             next = null;
         }
@@ -31,24 +27,11 @@ public class singleLL {
         }
     }
 
-    public void display(){
-        Node current = head;
-        if(current == null){
-            System.out.println("Empty List ");
-            return;
-        }
-        while(current != null){
-            System.out.print(current.data+"--->");
-            current = current.next;
-        }
-        System.out.println();
-    }
-
-    public Node removeDup(){
-        if(head == null || head.next == null){
+    public Node removeDuplicates(Node head){
+        if(head == null || head.next ==  null){
             return head;
         }
-        while(head != null){
+        while(head.next != null){
             if(head.data == head.next.data){
                 head = head.next.next;
             } else {
@@ -57,15 +40,22 @@ public class singleLL {
         }
         return head;
     }
+    public void printList(Node head){
+        if(head == null || head.next == null) {
+            System.out.println(head.data);
+        }
 
-
+        while(head.next != null) {
+            System.out.println(head.data);
+            head = head.next;
+        }
+    }
     public static void main(String[] args) {
         singleLL ssl = new singleLL();
         ssl.addNode(7);
-        ssl.addNode(7);
         ssl.addNode(8);
-        ssl.addNode(8);
-//        ssl.display();
-        System.out.println(ssl.removeDup());
+        ssl.addNode(9);
+//        singleLL_removeDuplicates.addNode(10);
+//        ssl.();
     }
 }
