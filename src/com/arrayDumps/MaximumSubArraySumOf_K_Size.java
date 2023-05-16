@@ -17,18 +17,19 @@ public class MaximumSubArraySumOf_K_Size {
                 arr[i] = sc.nextInt();
             }
 
-            int max = 0;
-            for (int i = 0; i <= n - k; i++) {
-                int sum = 0;
-                for (int j = i; j < k; j++) {
-                    sum += arr[j];
-                }
-                max = Math.max(max, sum);
-                System.out.print(max + " ");
+            int max = Integer.MIN_VALUE;
+            int sum = 0;
+            for(int i=0; i<k; i++){
+                sum += arr[i];
             }
-            System.out.println();
-            test--;
+            max = sum;
 
+            for (int j = 1; j <= (n-k); j++) {
+                sum = sum - arr[j-1] + arr[j+k-1];
+                max = Math.max(max, sum);
+            }
+            System.out.println(max);
+            test--;
         }
 
     }
