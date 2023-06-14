@@ -1,0 +1,8 @@
+Stack is
+
+
+Stack data structure operations :
+    - Push TimeComplexity - O(1)
+    - Pop  TimeComplexity - O(1)
+    - Peek TimeComplexity - O(1)
+
