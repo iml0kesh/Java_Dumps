@@ -8,7 +8,7 @@ public class arrayMaxAndMinProduct {
         Scanner sc = new Scanner(System.in);
         int max = Integer.MIN_VALUE;
         int size = sc.nextInt();
-        int arr[] = new int[size];
+        int[] arr = new int[size];
         for(int i = 0; i<arr.length; i++){
             int x = sc.nextInt();
             if(x > max){
