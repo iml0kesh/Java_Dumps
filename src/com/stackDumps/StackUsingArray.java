@@ -5,7 +5,7 @@ class StackArray {
     int top = -1;
     int capacity = 5;
 
-    int arr[];
+    int[] arr;
     public StackArray() {
         arr = new int[capacity];
     }
@@ -23,7 +23,8 @@ class StackArray {
         } else {
             System.out.println("Stack OverFLow");
         }
-    };
+    }
+
     int pop(){
         if(top == -1){
             System.out.println("No elements to POP");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ComputeNCR  {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long arr[][] = new long[2001][2001];
+        long[][] arr = new long[2001][2001];
         long mod = 1000000007;
 
         for(int i=0; i< arr.length; i++){

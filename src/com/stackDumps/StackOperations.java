@@ -29,7 +29,7 @@ class Main{
 
 class MyStack1 implements IStack{
     private int tp = -1;
-    private int[] arr;
+    private final int[] arr;
     private int capacity = 10;
 
     public MyStack1(){ // default constructor

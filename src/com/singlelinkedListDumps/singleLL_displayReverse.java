@@ -48,7 +48,8 @@ public class singleLL_displayReverse {
     public void displayReverse(Node current){
 
 
-        if(current == null) return;
+        if(current == null) {
+        }
 
         else{
             if(current.next==null){
