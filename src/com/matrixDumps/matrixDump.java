@@ -22,7 +22,7 @@ public class matrixDump {
             for (int j = 0; j < x[i].length; j++) {
                 System.out.print(x[i][j]+" ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 

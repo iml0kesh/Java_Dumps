@@ -9,7 +9,7 @@ public class LongestCommonSubstring {
             String s1 = sc.nextLine();
             String s2 = sc.nextLine();
 
-            int dp[][] = new int[s1.length()][s2.length()];
+            int[][] dp = new int[s1.length()][s2.length()];
 
             int max = Integer.MIN_VALUE;
             for(int i=s1.length()-1; i>=0; i--){

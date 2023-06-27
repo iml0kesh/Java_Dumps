@@ -5,15 +5,15 @@ import java.util.Stack;
 
 public class MixAndMaxStack {
 
-    public static void minAndMax(int arr[]){
+    public static void minAndMax(int[] arr){
         Stack<Integer> max = new Stack<>();
         max.push(arr[0]);
 
         Stack<Integer> min = new Stack<>();
         min.push(arr[0]);
 
-        int maxRes[] = new int[arr.length];
-        int minRes[] = new int[arr.length];
+        int[] maxRes = new int[arr.length];
+        int[] minRes = new int[arr.length];
 
         for(int i=0; i< arr.length; i++){
             if(arr[i] >= max.peek()){
@@ -45,7 +45,7 @@ public class MixAndMaxStack {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            int arr[] = new int[n];
+            int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }

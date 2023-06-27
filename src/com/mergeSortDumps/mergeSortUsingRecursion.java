@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class mergeSortUsingRecursion {
     public static void main(String[] args) {
-        int a[] = new int[5];
+        int[] a = new int[5];
 
         a = mergeSort(a);
     }
@@ -19,13 +19,13 @@ public class mergeSortUsingRecursion {
 
         int mid = n/2;
 
-        int first[] = mergeSort(Arrays.copyOfRange(a,0, mid));
-        int second[] = mergeSort(Arrays.copyOfRange(a, mid, n));
+        int[] first = mergeSort(Arrays.copyOfRange(a,0, mid));
+        int[] second = mergeSort(Arrays.copyOfRange(a, mid, n));
 
         return merge(first,second);
     }
 
-    public static int[] merge(int first[], int second[]){
+    public static int[] merge(int[] first, int[] second){
         int[] sorted = new int[first.length + second.length];
 
         int i = 0;

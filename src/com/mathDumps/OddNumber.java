@@ -4,11 +4,7 @@ import java.util.Scanner;
 
 public class OddNumber {
     public static boolean isOdd(int x){
-        if(x%2==0){
-            return false;
-        } else {
-            return true;
-        }
+        return x % 2 != 0;
     }
 
     public static void main(String[] args) {

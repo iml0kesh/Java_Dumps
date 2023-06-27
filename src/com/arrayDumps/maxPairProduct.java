@@ -26,7 +26,7 @@ public class maxPairProduct {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = 5;
-        int arr[] = new int[size];
+        int[] arr = new int[size];
         for(int i=0; i<size; i++){
             int x=sc.nextInt();
             if(x<0){

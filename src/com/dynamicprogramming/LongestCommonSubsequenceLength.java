@@ -8,7 +8,7 @@ public class LongestCommonSubsequenceLength {
     public static int LCS(String s1, String s2){
         int n1 = s1.length();
         int n2 = s2.length();
-        int dp[][] = new int[n1+1][n2+1];
+        int[][] dp = new int[n1+1][n2+1];
 
         for(int i=n1-1; i>=0; i--){
             for(int j=n2-1; j>=0; j--){

@@ -8,7 +8,7 @@ import java.util.Stack;
 public class NextGElement {
 
     public static void nge(int[] arr){
-        int res[] = new int[arr.length];
+        int[] res = new int[arr.length];
         Stack <Integer> st = new Stack<>();
         for(int i=0; i<arr.length; i++){
             while((!st.empty()) && (arr[i] > arr[st.peek()])){
@@ -24,7 +24,7 @@ public class NextGElement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int arr[] = new int[n];
+        int[] arr = new int[n];
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
