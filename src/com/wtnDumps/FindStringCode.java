@@ -16,7 +16,7 @@ public class FindStringCode {
             while(i < j){
                 int pos = x.charAt(i) & num;
                 int pos1 = x.charAt(j) & num;
-                totalsum += (pos - pos1);
+                totalsum += Math.abs(pos - pos1);
                 i++; j--;
             }
             if(x.length() % 2 != 0){
