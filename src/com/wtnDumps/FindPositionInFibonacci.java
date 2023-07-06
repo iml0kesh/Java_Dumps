@@ -8,9 +8,8 @@ public class FindPositionInFibonacci {
         int x = sc.nextInt();
         boolean found = true;
 
-        if(x == 0){
-            System.out.println(1);
-        }
+        if(x == 0){System.out.println(1);}
+
         int prev = 0;
         int next = 1;
         int length = 1;

@@ -3,47 +3,53 @@ package com.wtnDumps;
 import java.util.Scanner;
 
 public class UserIDGeneration {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         String s1 = sc.next();
         String s2 = sc.next();
         String pin = sc.next();
         int n = sc.nextInt();
 
+        int s1Length = s1.length();
+        int s2Length = s2.length();
 
-        String smallerName;
-        String largerName;
+        String LargerName;
+        String SmallerName;
 
-        if(s1.length() > s2.length()){
-            smallerName = s2;
-            largerName = s1;
-        } else if(s1.length() == s2.length()) {
+        if (s1Length > s2Length){
+            LargerName = s1;
+            SmallerName = s2;
+        } else if (s1Length == s2Length){
             if(s1.compareTo(s2) > 1){
-                largerName = s1;
-                smallerName = s2;
+                LargerName = s1;
+                SmallerName = s2;
             } else {
-                largerName = s2;
-                smallerName = s1;
+                LargerName = s2;
+                SmallerName = s1;
             }
         } else {
-            smallerName = s1;
-            largerName = s2;
+            LargerName = s2;
+            SmallerName = s1;
         }
 
+        char ch = LargerName.charAt(0);
+        char pin1 = pin.charAt(n-1);
+        char pin2 = pin.charAt(pin.length()-n);
 
-        char ch = largerName.charAt(0);
-        char num1 = pin.charAt(n-1);
-        char num2 = pin.charAt(pin.length()-n);
-        String finalW = ch + smallerName + num1 + num2;
-        StringBuilder res = new StringBuilder(finalW);
+        StringBuilder res = new StringBuilder();
+        res.append(ch+SmallerName+pin1+pin2);
+        System.out.println(res);
 
         for(int i=0; i<res.length(); i++){
-            if(Character.isUpperCase(finalW.charAt(i))){
-                res.setCharAt(i,Character.toLowerCase(finalW.charAt(i)));
+            if(Character.isUpperCase(res.charAt(i))){
+                res.setCharAt(i,Character.toLowerCase(res.charAt(i)));
             } else {
-                res.setCharAt(i,Character.toUpperCase(finalW.charAt(i)));
+                res.setCharAt(i,Character.toUpperCase(res.charAt(i)));
             }
         }
         System.out.println(res);
     }
 }
+
