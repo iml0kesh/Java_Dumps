@@ -1,0 +1,102 @@
+
+Date - 01 Aug 2023.
+
+file name, variable name, class name, function name, package name, exception name, method name.
+Pascal case - DisplayUsers.
+    - file name, class name, package name, exception name
+    - ArrayIndexOutOfBoundsException
+
+camel case - displayUsers
+    - variable name, function name or method name
+    - nextInt(), elementById()
+
+Question 1:
+Scenerio (Indirect)
+find the largest among the given array using function and without using looping and pre-defined functions.
+constraints
+    -100 > n < 100
+    -100 > a[i] < 100
+
+sample input
+    [10, 50, 60, 30, 40]
+sample output
+    60.
+
+location : com/accentureDumps/MaxOfArray.java
+
+Question 2:
+Implement using C Programming language.
+double the given array using function and function should return array.
+
+returntype doubleing(int arr[],...){
+return arr;
+}
+
+ip: [10,-5,20,-9]
+op: [20,-10,40,-18]
+
+
+Question3 :
+Implement logic based on input and output
+
+Test case1 :         Test case2:           TestCase3:
+
+ip2:
+1 2 100               1 2 100               1 4 100
+2 4 100               2 3 200               2 3 200
+3 5 100               3 4 100
+
+op: 200                op: 300               op:300
+
+
+arr[5]
+[0,0,0,0,0]
+1st
+[100,100,0,0,0]
+2nd
+[100,200,100,100,0]
+3rd
+[100,200,200,200,100]=> max of array
+
+Question_4
+Multi-dimensional array
+
+w-water a-air b-brick
+
+TestCase1:      TestCase2:         TestCase3:
+ip:              ip:                ip:
+
+wbb              bwb                bawb
+bbb              bab                bwwb
+bbb              bbb                bbbb
+
+op:              op:                op:
+unstable         unstable           stable
+
+03/08/2023.
+
+FIX THE Fourmula
+
+KAILY has been tricked by her brother to answer a question with a number. She is perlexed.
+
+"Fo+23the3*like2+" it took time fo her to understand now she wants to automate it with a program so that any time her brother comes with such tricky string she could answer with lesser efforts.
+
+here is what we have to do, seperate the math operations and digits like in the above string ypu can see the operators {+,*,+} and digits {2,3,3,2} rest all are ignored now arrange the digits and opratoers in the order of apperance to get the cprrect result.
+
+2+3*3+2
+
+to be solved as
+(2+3) = 5
+then (5*3) = 13,
+then (15+2) = 17.
+
+so for the given string "Fo+23the3*like2+" the final answer is : 17.
+
+public int fixTheFormula(String input1){
+
+}
+
+Assumptions :
+1) Numbers present in the string are always considered as 0 - 9
+2) only operators used in the string are (+,-,*,/)
+3) Always will have length + 1 to operators in the above example.
