@@ -1,4 +1,4 @@
-package com.mergeSortDumps;
+package com.sortingDumps.mergeSortDumps;
 
 import java.util.Scanner;
 

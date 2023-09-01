@@ -1,4 +1,4 @@
-package com.quickSortDumps;
+package com.sortingDumps.quickSortDumps;
 
 import java.util.Scanner;
 
