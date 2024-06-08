@@ -1,0 +1,33 @@
+Object Oriented Programming (OOP) :
+
+Access Modifiers:
+    Public : Accessible in all classes in your application
+    Protected : Accessible within package
+    Private : Only within the class.
+    Default : same class and package.
+
+
+Class : it is a user defined blueprint or prototype from which objects and created.
+Object : it is an instance of the class.
+
+This keyword is reference to the current object.
+
+Pillars of OOP:
+
+1.Abstraction:
+    Process of identifying only the required characteristics of an object, ignoring the irrelevant details.
+    Abstraction is achieved by interfaces and abstract classes.
+    100% abstraction using interfaces.
+    The abstract method contains only method declaration but not method implementation.
+
+    Ex:
+        // abstract class
+        abstract class Demo {
+            // abstract method declaration.
+            abstract void add();
+            abstract void mul();
+            abstract void div();
+        }
+
+2. Encapsulation:
+    

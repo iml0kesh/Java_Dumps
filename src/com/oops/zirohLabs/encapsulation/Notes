@@ -1,0 +1,3 @@
+Encapsulation is the concept of bundling data (attributes) and methods (functions)
+that operate on that data into a single unit called a class. Access to the data is
+controlled through methods.
