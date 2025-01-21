@@ -15,9 +15,6 @@ public class arrayMaxAndMinProduct {
                 max = x;
             }
             arr[i] = x;
-
-
-
         }
 
         int min = arr[0];
