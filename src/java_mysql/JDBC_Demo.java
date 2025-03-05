@@ -104,7 +104,41 @@ class JDBC_Demo2 {
     }
 }
 
+// Using String.format for insertion.
+
 class JDBC_Demo3 {
+
+    private static final String url = "jdbc:mysql://localhost:3306/jdbc";
+    private static final String username = "root";
+    private static final String password = "1937";
+
+    public static void main(String[] args) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            Connection con = DriverManager.getConnection(url,username,password);
+            Statement st = con.createStatement();
+
+            String query = String.format("Insert into jdbc_stds (name) Values ('%s')", "Uma");
+            int rf = st.executeUpdate(query);
+
+            System.out.println(rf > 0 ? "Data Inserted" : "Data Not inserted");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+
+
+// Using PreparedStatement
+
+class JDBC_Demo4 {
 
     private static final String url = "";
     private static final String username = "root";
