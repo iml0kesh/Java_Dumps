@@ -333,3 +333,55 @@ class JDBC_Demo8 {
 
 
 
+
+class JDBC_Demo9 {
+    private static final String url = "jdbc:mysql://localhost:3306/jdbc";
+    private static final String username = "root";
+    private static final String password = "1937";
+
+    public static void main(String[] args) {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            Connection con = DriverManager.getConnection(url,username,password);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

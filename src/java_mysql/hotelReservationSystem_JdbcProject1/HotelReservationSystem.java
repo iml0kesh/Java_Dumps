@@ -9,10 +9,8 @@ public class HotelReservationSystem {
     private static final String username = "root";
     private static final String password = "1937";
 
-    static Scanner sc = new Scanner(System.in);
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (Exception e) {
@@ -21,6 +19,7 @@ public class HotelReservationSystem {
 
         try {
             Connection con = DriverManager.getConnection(url,username,password);
+            Scanner sc = new Scanner(System.in);
             while(true){
                 System.out.println("Hotel Management System");
                 System.out.println("1. Reserve a Room");
@@ -32,30 +31,8 @@ public class HotelReservationSystem {
                 System.out.println("Choose an Option:");
                 int option = sc.nextInt();
 
-
                 if(option == 1){
-                    String name;
-                    int r_no;
-                    String c_no;
-
-                    System.out.println("Guest Name:");
-                    name = sc.next();
-
-                    System.out.println("Room no:");
-                    r_no = sc.nextInt();
-
-                    System.out.println("Contact no:");
-                    c_no = sc.next();
-
-                    String query = "INSERT INTO jdbc_reservation (guest_name, room_number, contact_number) VALUES (?, ?, ?)";
-                    PreparedStatement pst = con.prepareStatement(query);
-                    pst.setString(1,name);
-                    pst.setInt(2,r_no);
-                    pst.setString(3,c_no);
-
-                    int rf = pst.executeUpdate();
-                    System.out.println(rf > 0 ? "Data Inserted" : "Data Not Inserted");
-
+                    System.out.println(reserveARoom(con,sc));
                 } else if (option == 2) {
                     String query = "SELECT * FROM jdbc_reservation";
                     PreparedStatement pst = con.prepareStatement(query);
@@ -91,6 +68,35 @@ public class HotelReservationSystem {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static String reserveARoom(Connection con, Scanner sc){
+        try {
+            String name;
+            int r_no;
+            String c_no;
+
+            System.out.println("Guest Name:");
+            name = sc.next();
+
+            System.out.println("Room no:");
+            r_no = sc.nextInt();
+
+            System.out.println("Contact no:");
+            c_no = sc.next();
+
+            String query = "INSERT INTO jdbc_reservation (guest_name, room_number, contact_number) VALUES (?, ?, ?)";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, name);
+            pst.setInt(2, r_no);
+            pst.setString(3, c_no);
+
+            int rf = pst.executeUpdate();
+            return rf > 0 ? "Data Inserted" : "Data Not Inserted";
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 }
 
