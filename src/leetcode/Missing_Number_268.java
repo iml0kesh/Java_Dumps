@@ -1,4 +1,4 @@
-package leetcode_70;
+package leetcode;
 
 public class Missing_Number_268 {
     
