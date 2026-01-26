@@ -80,3 +80,83 @@ Case 2: Variable of larger capacity is assigned to another variable of smaller c
 	I = (int) d; 	[(int) -> Type cast operator]
 ```
 You must specify the Type Cast Operator. This process is called Type casting.
+
+**_There are a Total of 51 reserved keywords in java._**
+
+Control Flow:
+If Statements:
+1.	Simple if statement
+2.	if-else statement
+3.	if-else-if ladder
+4.	Nested if-statement
+
+```java 
+If(condition) {
+	// code
+If(condition) {
+		// nested if 
+// code
+}
+} else if (condition) {
+	// code
+} else {
+	// code
+}
+```
+
+Switch Statement:
+
+```java 
+Switch(val){
+	case value1:	// code
+			break;
+	case value2: 	// code
+			break;
+	default: 	// code
+}
+```
+
+### Methods:
+Methods in Java: A method is a block of code or collection of statements to perform a certain task or operation.
+
+**Access Specifier:** visibility of the method.
+1.	**Public:** The method is accessible by all classes.
+
+2.	**Private:** the method is accessible only in the class in which it is defined.
+3.	**Protected:** the method is accessible within the same package or subclasses in a different package.
+4.	**Default:** when we don’t use any access specifier, java uses default access specifier by default. It is visible only from the same package.
+
+**Types of Methods:** 
+Predefined methods: methods that are already defined in the java class libraries are known as predefined methods. Also known as the built-in method.
+```
+Ex: length(), equals(), compareTo(), sqrt().
+```
+**User-defined methods:** The method written by user or programmer is known as a user-defined method.
+
+**Static method:** A static method belongs to the class, not to any specific object. It can be called without creating an object of the class. 
+
+```java 
+Static int add(int a, int b) {}
+```
+
+**Instance method:** An instance method is a method that belongs to an object of a class. It can access instance variables and other instance methods of the class.
+
+**Abstract Method:** the method does not have the method body in known as abstract method. In other words, without implementation is known as an abstract method. The class itself must be abstract if it has an abstract method.
+
+**Final Method:** Cannot be overridden by subclasses. Useful to prevent modification.
+
+**Constructors:** a constructor is a block of code like the method without a return type. It is called when the instance of the class is created. It has the same name as class.
+
+1.	**Default Constructor:** A Constructor with no parameters. Java will create one automatically if not created by user.
+
+2.	**Parameterized Constructor:** A constructor that takes arguments to initialize object values.
+
+3.	**Constructor Overlading:** Multiple constructors with different parameters in the same class.
+
+Constructors can be overloaded with different parameters. Constructors cannot be overridden.
+
+**Copy constructor:**
+
+**_this() in constructor: Calls another constructor in same class._**
+
+**_super() in constructor: Calls parent class constructor (in inheritance)._**
