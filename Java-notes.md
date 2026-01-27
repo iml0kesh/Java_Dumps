@@ -160,3 +160,43 @@ Constructors can be overloaded with different parameters. Constructors cannot be
 **_this() in constructor: Calls another constructor in same class._**
 
 **_super() in constructor: Calls parent class constructor (in inheritance)._**
+
+___
+## STRINGS:
+**What are Strings?**
+
+Strings are nothing but a sequence of characters enclosed within double quotes.
+
+**How are Strings represented in Java?**
+
+In some other languages the strings are represented as an array of characters. But in case of java, Strings are represented as objects of **_java.lang.String_** class.
+
+**How do you create Strings in java?**
+
+There are two ways to create String objects in java.
+1. Using String literals
+	```java 
+	String s1 = “ABC”;
+	String s2 = “123”;
+	```
+2. Using new Operator ```java String s3 = new String(“user”);```
+
+### STRING POOL:
+
+The String Pool (also called the intern pool) is a special memory area in the Heap where Java stores string literals to optimize memory usage and improve performance.
+
+#### Why String pool Exist?
+
+•	Strings are used frequently in most Java applications.
+
+•	Strings are immutable (cannot be changed once created).
+
+•	Reusing the same string objects saves memory and boosts performance.
+Both a and b refer to the same object in the String Pool — no new object is created for b. 
+ 
+A new object is created in the Heap, not reused from the pool. Even though the value is the same, it’s a different object. 
+ 
+```java 
+a == b: true (same reference)
+a == c: false (different objects)
+```
