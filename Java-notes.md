@@ -200,3 +200,47 @@ A new object is created in the Heap, not reused from the pool. Even though the v
 a == b: true (same reference)
 a == c: false (different objects)
 ```
+---
+### EXCEPTION HANDLING:
+Exception is an unwanted event that interrupts the normal flow of the program.
+
+Types of exceptions:
+1.	**Checked exceptions:** that are checked at the compile-time.
+
+2.	**Unchecked exceptions:** not checked at the compile-time but they are checked at the runtime.
+
+**Try:** The try keyword is used to specify a block where we should place an exception code.
+
+**Catch:** The catch block contains code that is executed when the exception handler is invoked.
+
+**Finally:** The finally block contains code that is executed whether the exception occurs or not.
+
+**Throw:** throw keyword is used to declare an exception explicitly.
+
+**Throws:** The throws keyword is used in a method declaration to declare one or more exceptions that the method might throw during execution.
+
+**_TRY is mandatory, CATCH is also mandatory if NO FINALLY, finally is optional if both try and catch are present finally is mandatory if no catch in present._**
+
+Common Java Exception:
+
+1.	**ArithmeticException:** if we divide any number with zero.
+
+```java
+Int a = 50/0;
+```
+2.	**NullPointerException:** if we have null value in any variable.
+
+```java
+String s = null;
+Sout(s.length()); //NullPointerException
+```
+3.	**NumberFormatException:** if any variable or number is mismatched.
+
+```java
+String s="abc"; 
+Int i= Integer.parseInt(s); 
+```
+4.	**ArrayIndexOutOfBoundsException:**
+
+Java interview questions:
+1.	Can we use final keyword for class? Explain why and how?
