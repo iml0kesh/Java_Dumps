@@ -244,3 +244,94 @@ Int i= Integer.parseInt(s);
 
 Java interview questions:
 1.	Can we use final keyword for class? Explain why and how?
+___
+
+# OOPS:
+
+Object oriented programming is a methodology or programming paradigm to design a program using classes and objects.
+
+**What is an object?**
+
+An object represents a real-world entity. Objects are the instances of class.
+
+**What Is class?**
+
+A class is a blueprint or prototype from which objects are created. Collection of objects.
+
+### Concepts of OOP:
+**Abstraction:** it can be defined as hiding the internal implementation and showing only the required functionality. We use the keyword abstract. It can also be achieved by using abstract classes and interfaces in java. Only method signatures are exposed, implementation details are hidden.
+
+**Encapsulation:** Encapsulation is the process of binding variables and methods into a single unit, typically a class. It restricts direct access to internal data using access modifiers (like private, protected, and public), ensuring data integrity and security. 
+To access or modify the private data, getter and setter methods are used, which provide controlled and secure access to the class members.
+
+**Inheritance:** In Java, inheritance is a mechanism that allows one class (child/subclass) to inherit fields and methods from another class (parent/superclass). 
+
+Java supports the following types of inheritance:
+
+1. **Single Inheritance:** A subclass inherits from a single superclass.
+
+```java class Animal {}
+class Dog extends Animal {}
+```
+
+![alt text](image-1.png)
+ 
+2. **Multilevel Inheritance:** A class inherits from another derived class, forming a chain.
+
+```java
+class Animal {}
+class Mammal extends Animal {}
+class Dog extends Mammal {}
+```
+
+![alt text](image-2.png)
+ 
+3. **Hierarchical Inheritance:** Multiple classes inherit from a single parent class.
+
+```java
+class Animal {}
+class Dog extends Animal {}
+class Cat extends Animal {}
+```
+
+![alt text](image-3.png)
+ 
+4. **Multiple Inheritance (via Interfaces):** Java does not support multiple inheritance with classes but allows it using interfaces.
+
+```java
+interface Animal {}
+interface Bird {}
+class Bat implements Animal, Bird {}
+```
+
+![alt text](image-4.png)
+ 
+5. **Hybrid Inheritance (via Interfaces):** A combination of multiple and multilevel inheritance using interfaces.
+
+```java
+Class Parents {}
+interface Mother {}
+interface Father {}
+class child extends Parents implements Mother, Father {}
+```
+
+![alt text](image-5.png)
+ 
+
+**Polymorphism:** Polymorphism in Java is the ability of an object to take on many forms. It allows method to behave differently based on the object that invokes it.
+
+Java supports two types of polymorphism:
+
+**Compile Time (Static Binding / Method Overloading):** defining multiple methods in the same class with the same name but different parameters.
+The decision of which method to call is made at compile-time.
+
+![alt text](image-6.png)
+
+Here, add() method is overloaded with different parameters.
+
+**Runtime Polymorphism (Dynamic Binding / Method Overriding):**
+
+when a subclass provides a new implementation of a method that is already defined in its superclass, using the same method name, return type, and parameters.
+The decision of which method to call is made at runtime, based on the object type.
+
+![alt text](image-7.png)
