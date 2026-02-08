@@ -1,6 +1,6 @@
 package java_mysql;
 
-import com.mysql.cj.jdbc.Driver;
+//import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
 import java.util.Scanner;
